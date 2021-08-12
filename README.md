@@ -14,13 +14,17 @@ This project is constitued of a CNN model and a transformer model, capturing the
 This package requires:
 
 * Python 3.8
-* PyTorch Lightening
+* PyTorch (torch)
+* PyTorch Lightning: pytorch_lightning
+* timm
 * [RDkit](http://www.rdkit.org/docs/Install.html)
+* sklearn
 * tqdm (for training Prior)
 * pandas
 * numpy
 * cv2
 * os
+* albumentations
 * moses
 
 ## Usage
