@@ -44,7 +44,7 @@ This package requires:
   - trainset_by_cluster.csv : training set
   - testset_by_cluster.csv : test set
   - The npy file is a 5D array that derives from 5 original CIL image, corresponding to five channels as illustrating below
-  ![截屏2021-08-12 下午4 53 20](https://user-images.githubusercontent.com/57332047/129168784-e47a0bd7-203b-4a00-bd49-ccc2335424f4.png)
+  ![截屏2021-08-12 下午4 56 33](https://user-images.githubusercontent.com/57332047/129168933-043eeeb5-7c56-49f0-b730-fcd683171741.png)
 
 
 #### Important code files:
