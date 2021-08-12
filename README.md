@@ -45,7 +45,7 @@ All in **CFG.py**, detailed configs including:
 * decoder_mode = 'transformer'
 * encoder_name = 'tnt_s_patch16_224'
 * n_fold = 5, trn_fold = [0]
-* train_folds_path = './split_data/trainset_by_cluster.csv' : a data path file with SMILES sequence label, npy_file_path, fold_number (0-4): for cross-validation during training. More details please view this file
+* train_folds_path = './split_data/trainset_by_cluster.csv' : a data path file with SMILES sequence label, npy_file_path, fold_number (0-4): for cross-validation during training. Fo more details please view this file
 * tokenizer_path = './commercial_data/tokenizer_smiles_new.pth': a .pth file of the dictionary used for transformer, generated using test_smiles_token.py
 * cDNA_testset = False
 * greedy_sample = True # whether predicting/inferecing using greedy, rather than Multinomial Sampling
@@ -54,16 +54,17 @@ All in **CFG.py**, detailed configs including:
 * channel = '' (used fo 1 channel 'Hoechst' , 'ERSyto', 'ERSytoBleed')
 
 1. Training:
-* run train_transformer.py
-
+* download then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be careful that ~/ should be updated to the directory where your anaconda is installed) Also please download the weight on the github link (will be output on the screen the first time you run train_transformer.py)
+* run train_transformer.py (adjust CFG.py beforehand)
 
 2. Prediction:
-
-
-
-
+* run image_to_smiles.py (adjust CFG.py beforehand)
 
 3. Evaluation (Metrics):
+View the jupyter notebook .ipynb files such as:
+- testset_eval_new.ipynb
+- eval_cDNA_MS_predictions.ipynb
+- ...
 
 
 
