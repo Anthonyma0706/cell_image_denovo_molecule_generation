@@ -89,10 +89,10 @@ then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be ca
 
 * run `python train_transformer.py` (adjust CFG.py beforehand)
 * WEIGHTS will be saved at ./model![截屏2021-08-12 下午5 17 40](https://user-images.githubusercontent.com/57332047/129171993-1508b3e4-39b9-4d3f-b2dc-4d56b48178e6.png) 
-* Please note that the weight will be saved by name **last.ckpt** at the last epoch, please **DO RENAME** each one after training! Recommand rename using your specific task, date and score.
+* Please note that the weight will be saved with name **last.ckpt** at the last epoch, please **DO RENAME** each one after training! Recommand rename using your specific task, date and score.
 
-3. Prediction:
-![截屏2021-08-12 下午5 20 25](https://user-images.githubusercontent.com/57332047/129172409-3bb04941-5b94-43bb-bb83-30c810fe5aa4.png)
+3. Prediction: 
+* ![截屏2021-08-12 下午5 20 25](https://user-images.githubusercontent.com/57332047/129172409-3bb04941-5b94-43bb-bb83-30c810fe5aa4.png)
 * run `python image_to_smiles.py` (adjust CFG.py and GPU at the TOP of the file beforehand)
 
 4. Evaluation (Metrics):
