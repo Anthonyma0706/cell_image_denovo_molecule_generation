@@ -36,9 +36,34 @@ This package requires:
 * moses
 
 ## Usage
+Import configurations:
+All in **CFG.py**, detailed configs including:
+* n_gpus
+* batch_size
+* epochs
+* image_size, image_dim
+* decoder_mode = 'transformer'
+* encoder_name = 'tnt_s_patch16_224'
+* n_fold = 5, trn_fold = [0]
+* train_folds_path = './split_data/trainset_by_cluster.csv' : a data path file with SMILES sequence label, npy_file_path, fold_number (0-4): for cross-validation during training. More details please view this file
+* tokenizer_path = './commercial_data/tokenizer_smiles_new.pth': a .pth file of the dictionary used for transformer, generated using test_smiles_token.py
+* cDNA_testset = False
+* greedy_sample = True # whether predicting/inferecing using greedy, rather than Multinomial Sampling
+* multinomial_sample_size = 0, usually 200 for Multinomial sampling
+* image_channels = 5 (channels to use 5 or 3 or 1)
+* channel = '' (used fo 1 channel 'Hoechst' , 'ERSyto', 'ERSytoBleed')
+
+1. Training:
+* run train_transformer.py
+
+
+2. Prediction:
 
 
 
+
+
+3. Evaluation (Metrics):
 
 
 
