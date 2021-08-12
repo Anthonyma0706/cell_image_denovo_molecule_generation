@@ -1,9 +1,13 @@
 # cell_image_denovo_molecule_generation
 
-## Deep learning De Novo molecule generation task from Cell Painting Assay (CPA) Cell Images
+## De Novo hit-like molecule generation task using Cell Painting Assay (CPA) Cell Images
 
 
 ## Notes
+This project is constitued of a CNN model and a transformer model, capturing the cell morphological features from the CPA 5-channel images via Transformer in transformer CNN then predicting/outputing the SMILES sequences using the Transformer Decoder.
+
+
+
 
 ## Requirements
 
@@ -13,6 +17,11 @@ This package requires:
 * PyTorch Lightening
 * [RDkit](http://www.rdkit.org/docs/Install.html)
 * tqdm (for training Prior)
+* pandas
+* numpy
+* cv2
+* os
+* moses
 
 ## Usage
 
