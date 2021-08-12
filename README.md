@@ -1,4 +1,3 @@
-
 # cell_image_denovo_molecule_generation
 
 ## De Novo hit-like molecule generation task using Cell Painting Assay (CPA) Cell Images
@@ -85,10 +84,16 @@ All in **CFG.py**, detailed configs including:
    - Way 1: use my weight at /home/mingyang/.cache/torch/hub/checkpoints and copy to your path ~/.cache/torch/hub/checkpoints
    - Way 2: download the pretrained weights from github: (The link will be output on the screen the first time you run train_transformer.py)
 then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be careful that ~/ should be updated to the directory where your anaconda is installed)
-* run train_transformer.py (adjust CFG.py beforehand)
+* config train_transformer.py: adjust the GPU at the bottom, choose a free one using command `nvidia-smi` on the server; load the weights
+![截屏2021-08-12 下午5 14 30](https://user-images.githubusercontent.com/57332047/129171422-e9906edf-80db-4380-aa33-b821492521f1.png)
+
+* run `python train_transformer.py` (adjust CFG.py beforehand)
+* WEIGHTS will be saved at ./model![截屏2021-08-12 下午5 17 40](https://user-images.githubusercontent.com/57332047/129171993-1508b3e4-39b9-4d3f-b2dc-4d56b48178e6.png) 
+* Please note that the weight will be saved by name **last.ckpt** at the last epoch, please **DO RENAME** each one after training! Recommand rename using your specific task, date and score.
 
 3. Prediction:
-* run image_to_smiles.py (adjust CFG.py beforehand)
+![截屏2021-08-12 下午5 20 25](https://user-images.githubusercontent.com/57332047/129172409-3bb04941-5b94-43bb-bb83-30c810fe5aa4.png)
+* run `python image_to_smiles.py` (adjust CFG.py and GPU at the TOP of the file beforehand)
 
 4. Evaluation (Metrics):
 View the jupyter notebook .ipynb files such as:
