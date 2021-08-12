@@ -36,6 +36,20 @@ This package requires:
 * moses
 
 ## Usage
+#### Important data files/folders/paths on server 10.10.10:
+- My own directory: /home/mingyang/mma/transformer_code
+- /gxr/Omics/CIL/ : The directory on 10.10.10 where all the raw CIL cell images and processed npy files for 406 plates. Suggestion: Do not touch this folder, simply use the metadata containing the image file paths
+- /home/mingyang/mma/transformer_code/split_data: This folder contains all the important dataset you will need fo this project
+  ![截屏2021-08-12 下午4 45 27](https://user-images.githubusercontent.com/57332047/129167231-6a182fb0-3128-40e3-8eca-3b708c6a77a9.png)
+  - trainset_by_cluster.csv : training set
+  - testset_by_cluster.csv : test set
+#### Important code files:
+- CFG.py
+- data.py
+- transforms.py
+- model.py
+- train_transformer.py
+- image_to_smiles.py
 Import configurations:
 All in **CFG.py**, detailed configs including:
 * n_gpus
