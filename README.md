@@ -36,7 +36,11 @@ This package requires:
 * moses
 
 ## Usage
-#### Important data files/folders/paths on server 10.10.10:
+#### Things you may need to acquaint:
+* get to know about Cell Painting Assay and the CIL dataset
+* /home/mingyang/mma/transformer_code/cil_data/data_process_group_5_organelles.ipynb: This shows how I clean and process the raw data, including reading the zipfile directly then grouping the images of the same well and plate and channels
+* Note that you do not actually need to touch these data files. All files you need to use are introduced below, you may take a look to see the key attributes
+#### Necessary data files/folders/paths on server 10.10.10:
 - My own directory: /home/mingyang/mma/transformer_code
 - /gxr/Omics/CIL/ : The directory on 10.10.10 where all the raw CIL cell images and processed npy files for 406 plates. Suggestion: Do not touch this folder, simply use the metadata containing the image file paths
 - /home/mingyang/mma/transformer_code/split_data: This folder contains all the important dataset you will need fo this project
@@ -71,14 +75,22 @@ All in **CFG.py**, detailed configs including:
 * image_channels = 5 (channels to use 5 or 3 or 1)
 * channel = '' (used fo 1 channel 'Hoechst' , 'ERSyto', 'ERSytoBleed')
 
-1. Training:
-* download then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be careful that ~/ should be updated to the directory where your anaconda is installed) Also please download the weight on the github link (will be output on the screen the first time you run train_transformer.py)
+
+### Usage Pipeline:
+1. Data processing:
+* Split the training & test set using fingerprint clusters: /home/mingyang/mma/transformer_code/split_data_generate_input.ipynb
+
+2. Training:
+* Note: get the pretrained weights:
+   - Way 1: use my weight at /home/mingyang/.cache/torch/hub/checkpoints and copy to your path ~/.cache/torch/hub/checkpoints
+   - Way 2: download the pretrained weights from github: (The link will be output on the screen the first time you run train_transformer.py)
+then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be careful that ~/ should be updated to the directory where your anaconda is installed)
 * run train_transformer.py (adjust CFG.py beforehand)
 
-2. Prediction:
+3. Prediction:
 * run image_to_smiles.py (adjust CFG.py beforehand)
 
-3. Evaluation (Metrics):
+4. Evaluation (Metrics):
 View the jupyter notebook .ipynb files such as:
 - testset_eval_new.ipynb
 - eval_cDNA_MS_predictions.ipynb
