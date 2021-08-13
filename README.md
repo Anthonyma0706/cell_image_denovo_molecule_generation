@@ -80,7 +80,7 @@ All in **CFG.py**, detailed configs including:
 * Split the training & test set using fingerprint clusters: /home/mingyang/mma/transformer_code/split_data_generate_input.ipynb
 
 2. Training:
-* Note: get the pretrained weights:
+* Note: get the pretrained weights for CNN (now the default weight is for tnt_s_patch16_224):
    - Way 1: use my weight at /home/mingyang/.cache/torch/hub/checkpoints and copy to your path ~/.cache/torch/hub/checkpoints
    - Way 2: download the pretrained weights from github: (The link will be output on the screen the first time you run train_transformer.py)
 then save the pretrained weights to ~/.cache/torch/hub/checkpoints (Please be careful that ~/ should be updated to the directory where your anaconda is installed)
